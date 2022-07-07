@@ -24,9 +24,12 @@ app.use(express.urlencoded({ extended : false}));
 
 //Require Routes
 const authRouter = require('./routes/auth')
-
+const productRouter = require('./routes/product')
 app.use('/auth', authRouter)
+app.use('/product', productRouter)
+
 app.use(isLogin.login)
+
 app.get('/', (req, res)=>{
     res.send('funcionando')
 })
