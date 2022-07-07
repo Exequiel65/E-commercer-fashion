@@ -18,6 +18,9 @@ class AuthController {
         try {
             await user.save()
         } catch (error) {
+            if (error.code === 11000) {
+                
+            }
             return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
                 msg: error
             })
