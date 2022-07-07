@@ -1,5 +1,6 @@
 let User = require('../database/models/user')
 let httpStatus = require('../helpers/httpStatus')
+let jwt = require('../helpers/generateToken')
 let bcryptjs = require('bcryptjs')
 
 class AuthController {
@@ -21,8 +22,11 @@ class AuthController {
                 msg: error
             })
         }
+
+        let token = jwt.tokenSign(user)
         res.status(httpStatus.CREATED).json({
             msg: 'user succesfelly created',
+            token,
             data: user
         })
     }
@@ -39,13 +43,19 @@ class AuthController {
             })
         }
 
+
         if (user) {
             if (!bcryptjs.compareSync(password, user.password)) {
                 return res.status(httpStatus.BAD_REQUEST).json({
                     msg : 'credentials incorrect'
                 })
             }
+
+            let token = jwt.tokenSign(user)
+
             return res.status(httpStatus.OK).json({
+                msg : 'successful login',
+                token : token,
                 data: user
             })
         }
