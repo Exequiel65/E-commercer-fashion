@@ -30,7 +30,7 @@ class AuthController {
         res.status(httpStatus.CREATED).json({
             msg: 'user succesfelly created',
             token,
-            data: user
+            user
         })
     }
 
@@ -59,7 +59,7 @@ class AuthController {
             return res.status(httpStatus.OK).json({
                 msg : 'successful login',
                 token : token,
-                data: user
+                user
             })
         }
         res.status(httpStatus.NOT_FOUND).json({
