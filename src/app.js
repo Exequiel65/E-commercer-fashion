@@ -4,7 +4,7 @@ const express = require('express')
 const app = express()
 const morgan = require('morgan')
 const isLogin = require('./middlewares/isLogin')
-
+const cors = require('cors')
 // Conection MongoDB
 const mongoose = require('mongoose')
 const connectionString = process.env.URI_DB
@@ -19,7 +19,7 @@ mongoose.connect(connectionString,{
 app.use(morgan('tiny'))
 app.use(express.json())
 app.use(express.urlencoded({ extended : false}));
-
+app.use(cors())
 
 
 //Require Routes
