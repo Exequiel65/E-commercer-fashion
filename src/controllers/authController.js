@@ -5,10 +5,9 @@ let bcryptjs = require('bcryptjs')
 
 class AuthController {
     static async register(req, res) {
-        let { name, surname, password, email } = req.body
+        let { name, password, email } = req.body
         let user = new User({
             name,
-            surname,
             password : bcryptjs.hashSync(password, 10),
             email,
             avatar: 'default_img.png',
@@ -19,7 +18,9 @@ class AuthController {
             await user.save()
         } catch (error) {
             if (error.code === 11000) {
-                
+                return res.status(httpStatus.BAD_REQUEST).json({
+                    msg: 'email already registered'
+                })
             }
             return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
                 msg: error

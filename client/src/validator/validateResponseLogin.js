@@ -1,10 +1,12 @@
+import { HOST } from "../CONSTANT/host";
 import fetchPost from "../helpers/fetchPost";
 
-const validateResponse = async (setErrors, FormValue, Errors )=>{
+
+const validateResponse = async (setErrors, FormValue, Errors,url )=>{
     let msgs = {
         ...Errors
     }
-    let response = await fetchPost('http://localhost:3030/auth/login', FormValue)
+    let response = await fetchPost(`${HOST}${url}`, FormValue)
     if (response.request.status === 400) {
         if (response.response.data.errors) {
             let errors = response.response.data.errors
@@ -28,7 +30,6 @@ const validateResponse = async (setErrors, FormValue, Errors )=>{
                     switch (true) {
                         case err.msg === 'Password is required':
                             msgs.password = "Ingrese una contraseña"
-                            
                             break;
                         case err.msg === 'Password invalid':
                             msgs.password = "Ingrese una contraseña valida"
@@ -36,9 +37,20 @@ const validateResponse = async (setErrors, FormValue, Errors )=>{
                         case err.msg === 'min 8 and max 12 characters':
                             msgs.password = "Ingrese una contraseña con 8 a 12 caracteres"
                             break;
-                    
                         default:
+                            break;
+                    }   
+                } 
+                if (err.param === 'name') {
+                    switch (true) {
+                        case err.msg === 'Name is required':
+                            msgs.name = "Ingrese un Nombre"
                             
+                            break;
+                        case err.msg === 'Name is invalid':
+                            msgs.name = "Ingrese un Nombre valido"
+                            break;  
+                        default:
                             break;
                     }   
                 } 
@@ -46,12 +58,18 @@ const validateResponse = async (setErrors, FormValue, Errors )=>{
 
             setErrors(msgs)
         }
-
         if (response.response.data.msg) {
-            setErrors({
-                email : "",
-                password : 'Email o contraseña incorrecta'
-            })
+            if (response.response.data.msg === 'email already registered') {
+                setErrors({
+                    email : 'Email ya registrado',
+                    password : ''
+                })
+            } else{
+                setErrors({
+                    email : "",
+                    password : 'Email o contraseña incorrecta'
+                })
+            }
         }
     }
     if (response.request.status === 404) {
@@ -64,6 +82,9 @@ const validateResponse = async (setErrors, FormValue, Errors )=>{
     }
 
     if (response.status === 200) {
+        return response
+    }
+    if (response.status === 201) {
         return response
     }
   }

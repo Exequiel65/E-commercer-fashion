@@ -13,7 +13,7 @@
     }
 }
 
-.login-main{
+.auth-main{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -21,7 +21,7 @@
     overflow: hidden;
 }
 
-.aside-login{
+.aside-auth{
     height: 100vh;
     width: 60%;
     background: linear-gradient(180deg, #0575E6 0%, #02298A 84.79%, #021B79 100%);
@@ -30,7 +30,7 @@
     display: none;
 }
 
-.form-login-section{
+.form-auth-section{
     height: 100vh;
     width: 100%;
     display: flex;
@@ -41,7 +41,7 @@
     background-color: rgba(242, 243, 245, 1);
 }
 
-.svg-login{
+.svg-auth{
     position: absolute;
     bottom: -290px;
     left: -150px;
@@ -116,7 +116,7 @@
 }
 
 .form-contain button{
-    margin-top: 15px;
+    margin-top: 25px;
     color: white;
     background-color: #0575E6;
     border: none;
@@ -219,10 +219,10 @@
     .img-circle-820{
         display: none;
     }
-    .form-login-section{
+    .form-auth-section{
         width: 40%;
     }
-    .aside-login{
+    .aside-auth{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
@@ -230,26 +230,26 @@
         justify-content: center;
     }
 
-    .titles-login{
+    .titles-auth{
         width: 80%;
         color: white;
     }
 
-    .titles-login h2{
+    .titles-auth h2{
         font-style: normal;
         font-weight: 700;
         font-size: 40px;
         line-height: 60px;
     }
     
-    .titles-login p{
+    .titles-auth p{
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
         line-height: 27px;
     }
 
-    .titles-login a{
+    .titles-auth a{
         display: flex;
         flex-direction: row;
         justify-content: center;
