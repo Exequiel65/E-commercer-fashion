@@ -2,12 +2,13 @@ import { HOST } from "../CONSTANT/host";
 import fetchPost from "../helpers/fetchPost";
 
 
-const validateResponse = async (setErrors, FormValue, Errors,url )=>{
+const validateResponse = async (setErrors, FormValue, Errors,url, setLoad )=>{
     let msgs = {
         ...Errors
     }
     let response = await fetchPost(`${HOST}${url}`, FormValue)
     if (response.request.status === 400) {
+        setLoad(false)
         if (response.response.data.errors) {
             let errors = response.response.data.errors
             errors.map(err =>{
@@ -73,6 +74,7 @@ const validateResponse = async (setErrors, FormValue, Errors,url )=>{
         }
     }
     if (response.request.status === 404) {
+        setLoad(false)
         if (response.response.data.msg) {
             setErrors({
                 email : "",

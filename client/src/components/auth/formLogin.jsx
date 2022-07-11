@@ -34,7 +34,7 @@ const Form = ({setLoad}) => {
     let existError = valuesObjErr.find(value => value.length >0)
     setLoad(true)
     if (!existError && !valuesObj.includes('')) {
-      let resolve = await ValidateResponseLogin(setErrors, FormValue, Errors, '/auth/login');
+      let resolve = await ValidateResponseLogin(setErrors, FormValue, Errors, '/auth/login', setLoad);
       if (resolve.status === 200) {
         setLoad(false)
         dispatch(startLogin(resolve.data, resolve.data.token))
