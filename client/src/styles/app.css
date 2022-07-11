@@ -19,26 +19,34 @@ input{
     position: absolute;
     color: red;
     font-size: 0.7rem;
-    padding-left: 10px;
-    bottom: -30px;
+    padding-left: 15px;
+    bottom: -33px;
     line-height: 13px;
     height: 26px;
+    left: 0;
 }
 a{
     text-decoration: none;
 }
 
+.span-general{
+    bottom: -50px;
+}
 @media (min-width:820px) {
     .text-danger{
-        bottom: -25px;
+        bottom: -30px;
         font-size: 0.8rem;
-        padding-left: 5px;
+    }
+    .span-general{
+        bottom: -50px;
     }
 }
 @media (min-width:1200px) {
     .text-danger{
-        bottom: -28px;
+        bottom: -30px;
         font-size: 0.8rem;
-        padding-left: 7px;
+    }
+    .span-general{
+        bottom: -55px;
     }
 }

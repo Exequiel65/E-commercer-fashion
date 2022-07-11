@@ -21,10 +21,4 @@ module.exports = [
     .isString()
     .withMessage('Name is invalid').bail(),
 
-    check('surname')
-    .notEmpty()
-    .withMessage('Surname is required').bail()
-    .isString()
-    .withMessage('Surname is invalid').bail()
-
 ]
