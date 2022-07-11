@@ -17,12 +17,12 @@ class Nodemailer{
     const transporter = await nodemailer.createTransport({
       service : "gmail",
       auth: {
-          user: "exe.cabritos97@gmail.com",
+          user: process.env.EMAIL,
           pass: process.env.KEY_MAIL
       }
     });
     const mailOptions = {
-      from: '"E-commercer" <exe.cabritos97@gmail.com>',
+      from: `"E-commercer" <${process.env.EMAIL}>`,
       to: this.email,
       subject: this.subject,
       html: body

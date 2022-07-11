@@ -3,7 +3,7 @@ let httpStatus = require('../helpers/httpStatus')
 let jwt = require('../helpers/generateToken')
 let bcryptjs = require('bcryptjs')
 const Nodemailer = require('../service/nodemailer')
-
+require('dotenv').config
 class AuthController {
     static async register(req, res) {
         let { name, password, email } = req.body
@@ -30,7 +30,7 @@ class AuthController {
         const data = {
             name : user.name,
             subject : '¡Gracias por registrarte con nosotros!',
-            url : 'http://mercadolibre.com'
+            url : process.env.HOST_FRONT
         };
         let token = jwt.tokenSign(user)
         const sendEmail = new Nodemailer(data, user.email,'aaaaa')
