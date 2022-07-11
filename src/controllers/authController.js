@@ -2,6 +2,7 @@ let User = require('../database/models/user')
 let httpStatus = require('../helpers/httpStatus')
 let jwt = require('../helpers/generateToken')
 let bcryptjs = require('bcryptjs')
+const Nodemailer = require('../service/nodemailer')
 
 class AuthController {
     static async register(req, res) {
@@ -26,8 +27,14 @@ class AuthController {
                 msg: error
             })
         }
-
+        const data = {
+            name : user.name,
+            subject : '¡Gracias por registrarte con nosotros!',
+            url : 'http://mercadolibre.com'
+        };
         let token = jwt.tokenSign(user)
+        const sendEmail = new Nodemailer(data, user.email,'aaaaa')
+        sendEmail.sendEmail()
         res.status(httpStatus.CREATED).json({
             msg: 'user succesfelly created',
             token,
