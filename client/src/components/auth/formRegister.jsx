@@ -95,12 +95,14 @@ const Form = ({setLoad}) => {
         <span className="text-danger span-general" >{err}</span>
       </div>
       <button type="submit">Register</button>
-      <Link to="/" className="forgot-password">
-        Recuperar Contraseña
-      </Link>
-      <Link to="/login" className="forgot-password">
-        ¿Ya tienes cuenta?, Inicia Sesión.
-      </Link>
+      <div className="forgot-password-container">  
+        <Link to="/" className="forgot-password">
+          Recuperar Contraseña
+        </Link>
+        <Link to="/login" className="forgot-password">
+          ¿Ya tienes cuenta?, Inicia Sesión.
+        </Link>
+      </div>
     </form>
   );
 };
