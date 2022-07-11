@@ -3,8 +3,8 @@ const PORT = 3030 || process.env.PORT
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
-
-
+const isLogin = require('./middlewares/isLogin')
+const cors = require('cors')
 // Conection MongoDB
 const mongoose = require('mongoose')
 const connectionString = process.env.URI_DB
@@ -19,17 +19,20 @@ mongoose.connect(connectionString,{
 app.use(morgan('tiny'))
 app.use(express.json())
 app.use(express.urlencoded({ extended : false}));
-
+app.use(cors())
 
 
 //Require Routes
 const authRouter = require('./routes/auth')
+const productRouter = require('./routes/product')
+app.use('/auth', authRouter)
+app.use('/product', productRouter)
+
+app.use(isLogin.login)
 
 app.get('/', (req, res)=>{
     res.send('funcionando')
 })
-app.use('/auth', authRouter)
-
 
 app.listen(PORT, ()=>{
     console.log(`Server only in port: ${PORT}`)
