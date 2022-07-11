@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer')
 const ejs = require('ejs')
 const read = require('fs').readFileSync;
 const join = require('path').join;
-
+require('dotenv').config
 class Nodemailer{
   constructor(data, email, token){
     this.email = email,
@@ -18,7 +18,7 @@ class Nodemailer{
       service : "gmail",
       auth: {
           user: "exe.cabritos97@gmail.com",
-          pass: "rdbfzlwcptklsroi"
+          pass: process.env.KEY_MAIL
       }
     });
     const mailOptions = {
