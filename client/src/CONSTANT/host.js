@@ -1,1 +1,1 @@
-export const HOST = 'http://localhost:3030'
+export const HOST = 'https://api-e-commercer-fashion.herokuapp.com'

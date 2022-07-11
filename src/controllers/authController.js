@@ -3,7 +3,7 @@ let httpStatus = require('../helpers/httpStatus')
 let jwt = require('../helpers/generateToken')
 let bcryptjs = require('bcryptjs')
 const Nodemailer = require('../service/nodemailer')
-require('dotenv').config
+require('dotenv').config()
 class AuthController {
     static async register(req, res) {
         let { name, password, email } = req.body

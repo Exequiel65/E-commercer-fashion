@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-
+require('dotenv').config()
 class generateToken{
 
     // genera el token y con los datos del usuario

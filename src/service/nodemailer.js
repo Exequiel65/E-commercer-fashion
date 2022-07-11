@@ -2,7 +2,7 @@ const nodemailer = require('nodemailer')
 const ejs = require('ejs')
 const read = require('fs').readFileSync;
 const join = require('path').join;
-require('dotenv').config
+require('dotenv').config()
 class Nodemailer{
   constructor(data, email, token){
     this.email = email,
