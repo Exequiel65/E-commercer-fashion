@@ -40,6 +40,7 @@ const Form = ({setLoad}) => {
         dispatch(startLogin(resolve.data, resolve.data.token))
       }
     }else{
+      setLoad(false)
       seterr('Completa todos los campos')
     }
   };
