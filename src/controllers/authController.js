@@ -10,7 +10,7 @@ class AuthController {
         let user = new User({
             name,
             password : bcryptjs.hashSync(password, 10),
-            email,
+            email : email.trim(),
             avatar: 'default_img.png',
             admin: false
         })
