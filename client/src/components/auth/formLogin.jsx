@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import Validator from "../../helpers/validationsInputs";
 import Validation from "../../helpers/validations";
 import ValidateResponseLogin from "../../validator/validateResponseLogin";
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { startLogin } from '../../actions/authLogin'
 
 const Form = () => {
+  const dispatch = useDispatch()
   const [FormValue, setFormValue] = useState({
     email: "",
     password: "",
@@ -32,7 +34,9 @@ const Form = () => {
     let existError = valuesObjErr.find(value => value.length >0)
     if (!existError && !valuesObj.includes('')) {
       let resolve = await ValidateResponseLogin(setErrors, FormValue, Errors, '/auth/login');
-      console.log(resolve)
+      if (resolve.status === 200) {
+        dispatch(startLogin(resolve.data, resolve.data.token))
+      }
     }else{
       seterr('Completa todos los campos')
     }
