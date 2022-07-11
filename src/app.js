@@ -1,5 +1,5 @@
 require('dotenv').config()
-const PORT = 3030 || process.env.PORT
+const PORT =  process.env.PORT || 3030
 const express = require('express')
 const app = express()
 const morgan = require('morgan')
