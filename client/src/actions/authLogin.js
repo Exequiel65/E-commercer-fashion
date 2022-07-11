@@ -4,6 +4,8 @@ export const startLogin = (data, token)=>{
     let parse = {
         id : data.user._id,
         email : data.user.email,
+        avatar : data.user.avatar,
+        name : data.user.name,
         token
     }
     return (dispatch)=>{
@@ -11,6 +13,24 @@ export const startLogin = (data, token)=>{
         dispatch(login({
             user : parse
         }))
+    }
+
+}
+
+export const startRegister = (data, token)=>{
+    let parse = {
+        id : data.user._id,
+        email : data.user.email,
+        avatar : data.user.avatar,
+        name : data.user.name,
+        token
+    }
+    return (dispatch)=>{
+        sessionStorage.setItem('sessionEcommerce', JSON.stringify(parse))
+        dispatch({
+            type : types.authRegister,
+            payload : parse
+        })
     }
 
 }

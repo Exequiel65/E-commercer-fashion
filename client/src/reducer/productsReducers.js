@@ -13,27 +13,7 @@ const AuthReducer = (state = initialState, action) => {
             }
         case types.authLogout:
             return {
-                user : "",
-                student : "",
-                subjects : "",
-                teachers : ""
-            }
-
-        case types.GET_STUDENT:
-            return {
-                ...state,
-                student: action.payload
-            }
-        case types.GET_SUBJECT:
-            return {
-                ...state,
-                subjects: action.payload
-            }
-
-        case types.GET_TEACHERS:
-            return {
-                ...state,
-                teachers: action.payload
+                user : ""
             }
         default:
             return state

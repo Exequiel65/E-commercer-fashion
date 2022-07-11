@@ -11,6 +11,11 @@ const AuthReducer = (state = initialState, action) => {
                 ...state,
                 ...action.payload
             }
+        case types.authRegister:
+            return {
+                ...state,
+                ...action.payload
+            }
         case types.authLogout:
             return {
                 user : ""
