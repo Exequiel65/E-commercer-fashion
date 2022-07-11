@@ -47,7 +47,7 @@ class AuthController {
 
         let user = null
         try {
-            user = await User.findOne({ email : email})
+            user = await User.findOne({ email : email.trim(),})
         } catch (error) {
             return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
                 msg: error
