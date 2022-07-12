@@ -55,6 +55,7 @@ class ProductController{
         let newArrival
         let featuredProducts
         let bestSellers
+        let discounts
         try {
             
             newArrival = await Product.find({}).sort({createdAt : -1}).limit(5)
@@ -69,6 +70,7 @@ class ProductController{
 
         featuredProducts = sorted.sortFeatured(newArrival, 'ASC')
         bestSellers = sorted.sortBestSellers(newArrival, 'ASC')
+        discounts = sorted.sortDiscount(newArrival, 'ASC')
 
 
         res.status(httpStatus.OK).json({
@@ -76,6 +78,7 @@ class ProductController{
                 newArrival,
                 bestSellers,
                 featuredProducts,
+                discounts
             }
         })
     }

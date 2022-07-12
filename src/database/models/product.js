@@ -23,7 +23,7 @@ const productSchema = new Schema({
         type : String
     },
     discount : {
-        type :String
+        type : Number
     },
     salesCount : {
         type : Number

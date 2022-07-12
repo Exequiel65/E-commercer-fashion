@@ -1,0 +1,13 @@
+.first-vist{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(180deg, #0575E6 0%, #02298A 84.79%, #021B79 100%);
+    box-shadow: 0px 13px 41px rgba(38, 111, 197, 0.25);
+    overflow: hidden;
+}
+
+.line-home{
+    position: absolute;
+    left: 0;
+    top: 50px;
+}
