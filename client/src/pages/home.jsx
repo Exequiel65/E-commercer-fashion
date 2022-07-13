@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <main className='main-home'>
             <section className='first-vist'>
-                <div className='title-vist'>
+                <div className='title-vist animate__animated animate__fadeInDown animate__delay-1s'>
                     <h3>Welcome to E-commercer</h3>
                     <p>Lorem, ipsum dolor sit amet</p>
                 </div>

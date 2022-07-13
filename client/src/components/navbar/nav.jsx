@@ -17,7 +17,7 @@ const Nav = () => {
     return (
         <nav>
             <div className='logo-contain'>
-                <img src="" alt="logo" />
+                <img src="https://eivissa.es/innovacio/wp-content/uploads/2021/08/Curs-de-commerce.jpeg" alt="logo" />
             </div>
             <div className='hamburguer-menu' onClick={handleClick}>
                 <i className="fas fa-bars"></i>
