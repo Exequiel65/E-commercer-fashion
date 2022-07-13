@@ -1,0 +1,151 @@
+.downHome, .image-container, .image-contain-home, .image-contain-home img{
+    width: 100%;
+}
+
+.downHome{
+    margin-top: 50px;
+    padding-bottom: 100px;
+}
+.image-contain-home{
+    display: none;
+}
+
+.image-contain-home img{
+    max-height: 450px;
+}
+
+.card-modal{
+    width: 80%;
+    max-width: 500px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    box-shadow: 0px 3px 1px 0px rgba(62, 127, 224, 0.329);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.card-modal p{
+    margin-top: 10px;
+}
+.card-modal p:nth-child(1){
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 133.69%;
+    color: #000000;
+}
+
+.card-modal p:nth-child(2){
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 14px;
+    line-height: 133.69%;
+    text-align: center;
+    color: #000000;
+}
+.card-modal a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 30px;
+    gap: 10px;
+    background-color: #0575E6;
+    border-radius: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    margin: 10px 0;
+}
+
+.title-box{
+    padding-left: 30px;
+    margin: 30px 0;
+}
+
+.title-box h3{
+    font-family: var(--tavi);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: #0C1C45;
+}
+
+
+.line-instagram{
+    border-bottom: 2px solid gray;
+    width: 100px;
+}
+
+.copyright{
+    background-color: #14355E;
+    width: 100%;
+    padding: 10px;
+}
+
+.copyright p{
+    text-align: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+@media (min-width:820px) {
+    .image-contain-home{
+        display: block;
+    }
+    .image-container{
+        position: relative;
+    }
+
+    .card-modal{
+        position: absolute;
+        bottom: -30%;
+    }
+
+    .title-box{
+        padding-left: 100px;
+        margin: 100px 0;
+    }
+
+    .line-instagram{
+        width: 120px;
+    }
+    .title-box h3{
+        font-size: 30px;
+    }
+    .card-modal p:nth-child(2){
+        font-size: 18px;
+    }
+    .card-modal p:nth-child(1){
+        font-size: 25px;;
+    }
+}
+@media (min-width:1200px) {
+    .image-contain-home{
+        display: block;
+    }
+    .downHome{
+        position: relative;
+    }
+
+    .card-modal{
+        position: absolute;
+        bottom: -10%;
+    }
+    .title-box{
+        padding-left: 200px;
+        margin: 100px 0;
+    }
+}
