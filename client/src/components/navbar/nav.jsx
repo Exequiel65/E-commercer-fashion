@@ -1,27 +1,29 @@
 import React from 'react';
 import '../../styles/navBar.css'
+import StoreUser from './storeUser';
+import SubMenu from './subMenu';
 const Nav = () => {
+
+    const handleClick = ()=>{
+        let subMenu = document.querySelector('.link-nav-container')
+        if (subMenu.style.display === "" || subMenu.style.display === 'none') {
+            return subMenu.style.display = 'block'
+        } 
+        if (subMenu.style.display === 'block') {
+            return subMenu.style.display = 'none'
+        }
+
+    }
     return (
         <nav>
             <div className='logo-contain'>
                 <img src="" alt="logo" />
             </div>
-            <div className='link-nav-container'>
-                <ul className='nav-contain'>
-                    <li className='link-nav' >Home</li>
-                    <li className='link-nav' >Product</li>
-                    <li className='link-nav' >About</li>
-                    <li className='link-nav' >Contact</li>
-                    <li className='link-nav' >Store</li>
-                </ul>
+            <div className='hamburguer-menu' onClick={handleClick}>
+                <i className="fas fa-bars"></i>
             </div>
-            <div className='store-container'>
-                <ul className='list-contain'>
-                    <li><img src="/svg/Shape.svg" alt="" /></li>
-                    <li className='cart-contain'><img src="/svg/cart.svg" alt="" /></li>
-                    <li><i class="far fa-user"></i></li>
-                </ul>
-            </div>
+            <SubMenu />
+            <StoreUser />
         </nav>
     );
 }

@@ -1,0 +1,140 @@
+.carrousel-container{
+    width: 100%;
+    padding: 20px;
+    z-index: 20;
+    background-color: #f3f3f3;
+}
+.line-spacing{
+    width: 20%;
+    max-width: 145px;
+}
+.line-spacing div{
+    border-top: 1px solid #122B4A;
+    width: 100%;
+    height: 50%;
+}
+
+.title-carrousel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+}
+
+.title-carrousel h5{
+    font-family: var(--tavi);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 40px;
+    letter-spacing: 0.02em;
+    color: #0C1C45;
+}
+
+.card{
+    max-width: 300px;
+    height: 500px;
+    position: relative;
+}
+
+.photo-contain{
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    z-index: 30;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+}
+.photo-contain img{
+    width: 90%;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.data-contain{
+    position: absolute;
+    border-radius: 20px;
+    background-color: rgba(38, 111, 197, 0.25);
+    padding: 20px;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    bottom: 0;
+    z-index: 20;
+    padding-bottom: 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.name-product {
+    font-family: var(--tavi);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #333333;
+}
+
+.discount{
+    font-family: var(--tavi);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #777777;
+}
+.price-carousel{
+    font-family: var(--tavi);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #777777;
+
+}
+
+.carrousel-contain{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.box-contain{
+    width: 70%;
+}
+
+.carousel{
+    width: 100%;
+}
+.slick-prev:before ,.slick-next:before{
+    color: black !important;
+}
+
+.slick-list {margin: 0 -5px;}
+.slick-slide>div {padding: 0 5px;}
+
+@media (min-width: 820px) {
+    .title-carrousel{
+        padding-left: 50px;
+    }
+    .data-contain{
+        height: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .slick-list {margin: 0 -20px;}
+    .slick-slide>div {padding: 0 20px;}
+}
