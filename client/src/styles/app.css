@@ -44,6 +44,14 @@ li{
     align-items: center;
     justify-content: center;
 }
+
+.flex-row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
 @media (min-width:820px) {
     .text-danger{
         bottom: -30px;

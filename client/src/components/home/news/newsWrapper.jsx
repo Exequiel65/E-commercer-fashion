@@ -1,7 +1,7 @@
 import React from 'react';
 
 import New from './new';
-
+import '../../../styles/sectionNews.css'
 const NewsWrapper = () => {
     return (
         <section className='news-section flex-row'>
