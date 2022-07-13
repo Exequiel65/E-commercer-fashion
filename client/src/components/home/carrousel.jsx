@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../styles/carrousel.css'
 import Slider from "react-slick";
-import Carousel from 'nuka-carousel'
+import TitleProductsHome from './titleProductsHome';
 
 const Carrousel = () => {
     const settings = {
@@ -45,12 +45,7 @@ const Carrousel = () => {
       };
     return (
         <section className='carrousel-container'>
-            <div className='title-carrousel'>
-                <div className='line-spacing'>
-                    <div></div>
-                </div>
-                <h5>Monthly Deals</h5>
-            </div>
+            <TitleProductsHome title='Monthly Deals' />
             <div className='carrousel-contain'>
                 <div className='box-contain'>
                     <Slider className='carousel' {...settings}>

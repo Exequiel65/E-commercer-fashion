@@ -36,6 +36,14 @@ li{
 .span-general{
     bottom: -50px;
 }
+
+.flex-colummn{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 @media (min-width:820px) {
     .text-danger{
         bottom: -30px;
