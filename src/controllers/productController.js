@@ -57,9 +57,7 @@ class ProductController{
         let bestSellers
         let discounts
         try {
-            
-            newArrival = await Product.find({}).sort({createdAt : -1}).limit(5)
-
+            newArrival = await Product.find({}).sort({createdAt : -1})
         } catch (error) {
             return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
                 msg: error
@@ -74,12 +72,10 @@ class ProductController{
 
 
         res.status(httpStatus.OK).json({
-            data: {
-                newArrival,
-                bestSellers,
-                featuredProducts,
-                discounts
-            }
+            newArrival : newArrival.slice(0,5),
+            bestSellers : bestSellers.slice(0,5),
+            featuredProducts: featuredProducts.slice(0,5),
+            discounts : discounts.slice(0,10)
         })
     }
 }

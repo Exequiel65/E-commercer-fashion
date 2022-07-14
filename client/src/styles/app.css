@@ -52,6 +52,22 @@ li{
     justify-content: center;
     align-items: center;
 }
+
+.discount{
+    text-decoration: line-through;
+    text-decoration-color: red;
+    margin: 0;
+}
+
+.text-discount{
+    text-decoration: none;
+    font-family: var(--tavi);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 16px;
+    color: red;
+}
 @media (min-width:820px) {
     .text-danger{
         bottom: -30px;

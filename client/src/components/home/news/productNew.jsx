@@ -1,17 +1,31 @@
 import React from "react";
+import { result } from '../../../helpers/salesFunction'
+import { toThousand } from '../../../helpers/toThousand'
 
-const ProductNew = () => {
+const ProductNew = ({product}) => {
+  let price = product.price
+  if (product.discount > 0) {
+    price = result(product.discount, product.price)
+  }
+
   return (
     <div className="product-contain flex-row">
       <div className="image-contain">
         <img
-          src="https://imagesa1.lacoste.com/dw/image/v2/BCWL_PRD/on/demandware.static/-/Sites-master/default/dw03f023c8/42CMA0054_1R7_01.jpg?imwidth=690&impolicy=product"
+          src={product.images[0]}
           alt=""
         />
       </div>
       <div className="data-contain-new">
-        <p className="name-product-new">Nombre producto</p>
-        <p className="price-product-new">Price</p>
+        <p className="name-product-new">{product.name}</p>
+        {product.discount > 0 && 
+        <>
+          <p className="name-product-new discount">${product.price}</p>
+          <span className="text-discount">%{product.discount}</span>
+          
+        </>
+        }
+        <p className="price-product-new">$ {toThousand(price)}</p>
       </div>
     </div>
   );
