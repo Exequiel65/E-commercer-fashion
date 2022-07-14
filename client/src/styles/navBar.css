@@ -58,7 +58,7 @@ nav{
     width: 40px;
 }
 
-.cart-contain{
+.cart-contain a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -82,7 +82,7 @@ nav{
 }
 
 
-.nav-contain, .hamburguer-menu{
+.nav-contain a, .hamburguer-menu{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,22 +90,23 @@ nav{
     flex-wrap: wrap;
 }
 
-.nav-contain{
+.nav-contain a{
     width: 100%;
+    color: black;
 }
 
-.nav-contain li{
+.nav-contain li a{
     padding: 5px;
     cursor: pointer;
     width: 100%;
     text-align: center;
 }
 
-.nav-contain li:hover{
+.nav-contain li a:hover{
     background-color: #ffffff;
 }
 
-.profile-button{
+.profile-button a{
     color: white;
     font-size: 1.5rem;
 }
@@ -141,7 +142,7 @@ nav{
         background-color: #036fdb;
     
     }
-    .nav-contain, .list-contain{
+    .nav-contain , .list-contain{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -149,7 +150,7 @@ nav{
         align-items: center;
     }
 
-    .nav-contain li{
+    .nav-contain li a{
         width: fit-content;
         font-family: var(--roboto);
         font-style: normal;
@@ -174,7 +175,7 @@ nav{
         -ms-transition: all 1s ease;
         -o-transition: all 1s ease;
     }
-    .nav-contain li:hover, .list-contain li:hover{
+    .nav-contain li a:hover, .list-contain li a:hover{
         background-color: rgba(245, 245, 220, 0);
         color: white;
         font-weight: 400;

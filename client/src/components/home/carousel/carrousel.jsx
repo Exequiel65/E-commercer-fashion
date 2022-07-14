@@ -5,7 +5,6 @@ import TitleProductsHome from '../titleProductsHome';
 import ItemCarousel from './itemCarousel';
 
 const Carrousel = ({products}) => {
-    console.log(products)
     const settings = {
         infinite: true,
         speed: 500,
