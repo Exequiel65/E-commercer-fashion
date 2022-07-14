@@ -2,15 +2,19 @@ import React from 'react';
 
 import New from './new';
 import '../../../styles/sectionNews.css'
-const NewsWrapper = () => {
+import Loader from '../../Load/Loader';
+const NewsWrapper = ({newArrival, featured, bestSellers}) => {
     return (
         <section className='news-section flex-row'>
+            { newArrival || featured || bestSellers ? 
                 <div className='news-container flex-row'>
-                    <New title='Bestseller' />
-                    <New title='New Arrival' />
-                    <New title='Featured' />
+
+                    {bestSellers && <New title='Bestseller' products={bestSellers}/>}
+                    { newArrival && <New title='New Arrival' products={newArrival} />}
+                    { featured && <New title='Featured' products={featured} />}
 
                 </div>
+             : <Loader style={{position : 'relative', backgroundColor : '#F2F3F5', zIndex: 10, height:'50vh'}}/>}
             </section>
     );
 }

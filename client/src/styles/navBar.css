@@ -47,6 +47,7 @@ nav{
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
+    cursor: pointer;
 }
 .hamburguer-menu i{
     font-size: 1.5rem;
@@ -108,9 +109,18 @@ nav{
     color: white;
     font-size: 1.5rem;
 }
+
+@media (min-width:820px) {
+    nav{
+        justify-content: space-around;
+    }
+}
 @media (min-width : 1200px) {
     .logo-contain{
         flex-grow: 0.5;
+    }
+    .logo-contain img{
+        margin-left: 45px;
     }
     
     .link-nav-container{
@@ -152,7 +162,7 @@ nav{
         -moz-transition: all 1s ease;
         -ms-transition: all 1s ease;
         -o-transition: all 1s ease;
-}
+    }
     .search-button, .profile-button{
         display: block;
     }
