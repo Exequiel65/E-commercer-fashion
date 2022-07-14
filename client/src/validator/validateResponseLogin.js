@@ -1,5 +1,5 @@
 import { HOST } from "../CONSTANT/host";
-import fetchPost from "../helpers/fetchPost";
+import { fetchPost } from "../helpers/AxiosMethod";
 
 
 const validateResponse = async (setErrors, FormValue, Errors,url, setLoad )=>{

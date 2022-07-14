@@ -1,8 +1,8 @@
 import React from 'react';
 import '../../styles/loader.css'
-const Loader = () => {
+const Loader = ({style}) => {
     return (
-        <div className='loader-container'>
+        <div className='loader-container' style={style}>
             <div className="preloader"></div>
         </div>
         

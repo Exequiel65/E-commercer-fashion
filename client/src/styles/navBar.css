@@ -47,6 +47,7 @@ nav{
     -moz-border-radius: 100%;
     -ms-border-radius: 100%;
     -o-border-radius: 100%;
+    cursor: pointer;
 }
 .hamburguer-menu i{
     font-size: 1.5rem;
@@ -57,7 +58,7 @@ nav{
     width: 40px;
 }
 
-.cart-contain{
+.cart-contain a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -81,7 +82,7 @@ nav{
 }
 
 
-.nav-contain, .hamburguer-menu{
+.nav-contain a, .hamburguer-menu{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -89,28 +90,38 @@ nav{
     flex-wrap: wrap;
 }
 
-.nav-contain{
+.nav-contain a{
     width: 100%;
+    color: black;
 }
 
-.nav-contain li{
+.nav-contain li a{
     padding: 5px;
     cursor: pointer;
     width: 100%;
     text-align: center;
 }
 
-.nav-contain li:hover{
+.nav-contain li a:hover{
     background-color: #ffffff;
 }
 
-.profile-button{
+.profile-button a{
     color: white;
     font-size: 1.5rem;
+}
+
+@media (min-width:820px) {
+    nav{
+        justify-content: space-around;
+    }
 }
 @media (min-width : 1200px) {
     .logo-contain{
         flex-grow: 0.5;
+    }
+    .logo-contain img{
+        margin-left: 45px;
     }
     
     .link-nav-container{
@@ -131,7 +142,7 @@ nav{
         background-color: #036fdb;
     
     }
-    .nav-contain, .list-contain{
+    .nav-contain , .list-contain{
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -139,7 +150,7 @@ nav{
         align-items: center;
     }
 
-    .nav-contain li{
+    .nav-contain li a{
         width: fit-content;
         font-family: var(--roboto);
         font-style: normal;
@@ -152,7 +163,7 @@ nav{
         -moz-transition: all 1s ease;
         -ms-transition: all 1s ease;
         -o-transition: all 1s ease;
-}
+    }
     .search-button, .profile-button{
         display: block;
     }
@@ -164,7 +175,7 @@ nav{
         -ms-transition: all 1s ease;
         -o-transition: all 1s ease;
     }
-    .nav-contain li:hover, .list-contain li:hover{
+    .nav-contain li a:hover, .list-contain li a:hover{
         background-color: rgba(245, 245, 220, 0);
         color: white;
         font-weight: 400;
