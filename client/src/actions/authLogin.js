@@ -37,7 +37,7 @@ export const startRegister = (data, token)=>{
 
 export const logout= ()=>{
     return(dispatch)=>{
-        localStorage.removeItem('sessionEcommerce')
+        sessionStorage.removeItem('sessionEcommerce')
         dispatch({
             type : types.authLogout
         })

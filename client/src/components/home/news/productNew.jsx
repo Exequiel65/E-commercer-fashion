@@ -21,7 +21,7 @@ const ProductNew = ({product}) => {
         {product.discount > 0 && 
         <>
           <p className="name-product-new discount">${product.price}</p>
-          <span className="text-discount">%{product.discount}</span>
+          <span className="text-discount">{product.discount}%</span>
           
         </>
         }

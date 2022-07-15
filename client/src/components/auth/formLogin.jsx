@@ -85,6 +85,7 @@ const Form = ({setLoad}) => {
         <Link to="/register" className="forgot-password">
           ¿No tenés cuenta?, Registrate.
         </Link>
+        <Link className="nav-home" to="/">Ir a pagina Principal</Link>
       </div>
     </form>
   );

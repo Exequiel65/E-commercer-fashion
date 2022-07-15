@@ -68,6 +68,10 @@ li{
     line-height: 16px;
     color: red;
 }
+
+.ds-none{
+    display: none;
+}
 @media (min-width:820px) {
     .text-danger{
         bottom: -30px;

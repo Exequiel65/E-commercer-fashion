@@ -41,6 +41,8 @@
     background-color: rgba(242, 243, 245, 1);
 }
 
+
+
 .svg-auth{
     position: absolute;
     bottom: -290px;
@@ -200,6 +202,13 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+}
+
+.nav-home{
+    margin-top: 30px;
+    color: black;
+    font-family: var(--poppins);
+    text-decoration: underline gray;
 }
 
 @media (min-width:820px) {
