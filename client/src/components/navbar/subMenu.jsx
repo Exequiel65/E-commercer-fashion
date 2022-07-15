@@ -30,7 +30,7 @@ const SubMenu = ({isLogin}) => {
         <li className="link-nav"><Link to='/about' onClick={handleClick}>About</Link></li>
         <li className="link-nav"><Link to='/contact' onClick={handleClick}>Contact</Link></li>
         <li className="link-nav"><Link to='/store' onClick={handleClick}>Store</Link></li>
-        {isLogin ? <li className="link-nav user-login" ><Link to='/profile' onClick={handleClick}>Profile</Link></li> : <li className="link-nav"><Link to='/login'>Login</Link></li>}
+        {isLogin ? <li className="link-nav user-login" ><Link to='/profile' onClick={handleClick}>Profile</Link></li> : <li className="link-nav user-login"><Link to='/login'>Login</Link></li>}
         {isLogin && <li className="link-nav user-login"><a href="/" onClick={handleClick}>Logout</a></li>}
       </ul>
     </div>
