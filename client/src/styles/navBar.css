@@ -156,7 +156,7 @@ nav{
     }
     .link-nav-container{
         width: max-content;
-        display: block;
+        display: block !important;
         position: relative;
         top: 0;
         bottom: 0;
