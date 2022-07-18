@@ -4,6 +4,7 @@ import NewsWrapper from '../components/home/news/newsWrapper';
 import DownHome from '../components/home/bottomHome/downHome';
 import '../styles/home.css'
 import { FetchGet } from '../helpers/AxiosMethod'
+import FirstVist from '../components/firstVist';
 
 const Home = () => {
     const [Products, setProducts] = useState({});
@@ -17,13 +18,7 @@ const Home = () => {
     }, []);
     return (
         <main className='main-home'>
-            <section className='first-vist'>
-                <div className='title-vist animate__animated animate__fadeInDown animate__delay-1s'>
-                    <h3>Welcome to E-commercer</h3>
-                    <p>Lorem, ipsum dolor sit amet</p>
-                </div>
-                <img className='line-home' src="/svg/line-home.svg" alt="" />
-            </section>
+            <FirstVist title='Welcome to E-commercer' descr='Lorem, ipsum dolor sit amet'/>
             <Carrousel products={Products.discounts} />
 
             <NewsWrapper featured={Products.featuredProducts} bestSellers={Products.bestSellers} newArrival={Products.newArrival} />

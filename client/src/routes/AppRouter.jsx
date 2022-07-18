@@ -13,7 +13,7 @@ const AppRouter = () => {
         <Routes>
             <Route path='/login' element={ estado.auth.user ? <Navigate to='/' /> : <Login />} />
             <Route path='/register' element={estado.auth.user ? <Navigate to='/' /> : <Register />} />
-            <Route path='/*' element={<HomeRouter />} />
+            <Route path='/*' element={<HomeRouter />} />      
         </Routes>
     );
 }

@@ -72,6 +72,9 @@ li{
 .ds-none{
     display: none;
 }
+main{
+    background-color: #F2F3F5;
+}
 @media (min-width:820px) {
     .text-danger{
         bottom: -30px;

@@ -1,0 +1,108 @@
+.main-about{
+    width: 100%;
+}
+.section-about{
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.article-about:nth-child(2){
+    margin-top: 100px;
+}
+
+
+.image-container-about, .image-container-about img, .description-container{
+    width: 100%;
+}
+.image-container-about, .description-container{
+    max-width: 500px;
+}
+
+.description-container span{
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #EC1C24;
+}
+.description-container h4{
+    font-family: var(--poppins);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 133%;
+    color: #131D3B;
+}
+.description-container p{
+    font-family: var(--roboto);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 188%;
+    color: #131D3B;
+}
+.description-container ul li{
+    font-family: var(--roboto);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 222%;
+    color: #131D3B;
+}
+
+.description-container ul li::before {
+    content: "• ";
+    color: red; 
+    font-size: 18px;
+  }
+
+
+
+@media (min-width:820px){
+    .image-container-about, .description-container{
+        width: 45%;
+    }
+    .article-about{
+        width: 100%;
+    }
+    .article-about{
+        flex-direction: row !important;
+        justify-content: space-between !important;
+    }
+}
+@media (min-width:1200px){
+    .description-container span{
+        font-size: 14px;
+    }
+    .image-container-about{
+        max-width: 600px;
+    }
+    .description-container{
+        max-width: 600px;
+    }
+    .article-about{
+        flex-direction: row !important;
+        justify-content: space-evenly !important;
+        max-width: 1400px;
+    }
+
+    #description-2{
+        order: 1;
+    }
+
+    #image-2{
+        order: 2;
+    }
+
+    .description-container ul li{
+        line-height: 222%;
+        font-size: 18px;
+    }
+    .description-container ul li{
+        line-height: 266%;
+    }
+    
+}
