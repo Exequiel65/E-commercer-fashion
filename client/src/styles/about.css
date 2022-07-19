@@ -57,8 +57,71 @@
     content: "• ";
     color: red; 
     font-size: 18px;
-  }
+}
 
+.section-company-vision{
+    width: 100%;
+    background-image: url('../../public/svg/svgAbout.svg');
+    background-size: cover;
+    margin-bottom: 50px;
+    padding: 100px 0;
+}
+
+.company-vision{
+    text-align: center;
+    width: 90%;
+    padding: 10px;
+    max-width: 350px;
+}
+
+.company-vision span{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #EC1C24;
+}
+
+.company-vision p{
+    font-family: var(--roboto);
+    margin-top: 10px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    text-align: center;
+    color: #F2F3F5;
+    margin-bottom: 10px;
+}
+
+.article-founder:nth-child(2){
+    margin-bottom: 60px;
+}
+
+.name-founder{
+    font-style: normal !important;
+    font-weight: 500 !important;
+    font-size: 26px !important;
+    color: #EC1C24 !important;
+    padding: 10px 0;
+}
+
+.description-founder{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.image-founder{
+    max-width: 300px !important;
+}
+.image-founder img{
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
 
 
 @media (min-width:820px){
@@ -71,6 +134,28 @@
     .article-about{
         flex-direction: row !important;
         justify-content: space-between !important;
+    }
+    .article-founder{
+        justify-content: space-evenly !important;
+    }
+    .section-company-vision{
+        padding: 200px 0;
+    }
+    .company-vision{
+        max-width: 400px;
+    }
+    
+    .company-vision span{
+        font-size: 16px;
+        line-height: 22px;;
+    }
+    
+    .company-vision p{
+        font-size: 1.1rem;
+        line-height: 24px;
+    }
+    .article-founder:nth-child(3) .image-founder{
+        order: 2;
     }
 }
 @media (min-width:1200px){
@@ -103,6 +188,21 @@
     }
     .description-container ul li{
         line-height: 266%;
+    }
+    .section-company-vision{
+        height: 100vh;
+    }
+    .company-vision{
+        max-width: 500px;
+    }
+    .company-vision span{
+        font-size: 20px;
+        line-height: 22px;;
+    }
+    
+    .company-vision p{
+        font-size: 1.2rem;
+        line-height: 27px;
     }
     
 }
