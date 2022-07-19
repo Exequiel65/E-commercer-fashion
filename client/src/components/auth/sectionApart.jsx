@@ -6,7 +6,7 @@ const SectionApart = () => {
       <div className="titles-auth animate__animated animate__fadeInDown animate__delay-1s">
         <h2>Lorem ipsum</h2>
         <p>Lorem ipsum dolor sit</p>
-        <a href="/">Read More</a>
+        <a href="/">Ir a pagina Principal</a>
       </div>
       <img className="svg-auth" src="/svg/Group.svg" alt="" />
     </section>

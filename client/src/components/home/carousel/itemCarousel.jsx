@@ -18,7 +18,7 @@ let price = product.price
         <div className="data">
           <p className="name-product">{product.name}</p>
           <p className="discount">${product.price}</p>
-          <span className="text-discount">%{product.discount}</span>
+          <span className="text-discount">{product.discount}%</span>
           <p className="price-carousel">$ {toThousand(price)}</p>
         </div>
       </div>

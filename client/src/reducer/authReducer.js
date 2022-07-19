@@ -18,6 +18,7 @@ const AuthReducer = (state = initialState, action) => {
             }
         case types.authLogout:
             return {
+                ...state,
                 user : ""
             }
         default:

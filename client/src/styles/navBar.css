@@ -77,7 +77,7 @@ nav{
     width: 100%;
     background-color: rgb(238, 238, 238);
     left: 0;
-    bottom: -175px;
+    bottom: -205px;
     
 }
 
@@ -110,7 +110,28 @@ nav{
     color: white;
     font-size: 1.5rem;
 }
-
+.profile-button{
+    position: relative;
+}
+.dropdown-user-login{
+    /*display: none;
+    */border: 1px solid rgb(190, 190, 190);
+    background-color: #036fdb;
+    width: 100px;
+    position: absolute;
+    left: -50px;
+    bottom: -88px;
+    padding: 10px;
+    border-radius: 0 0 20px 20px;
+    -webkit-border-radius: 0 0 20px 20px;
+    -moz-border-radius: 0 0 20px 20px;
+    -ms-border-radius: 0 0 20px 20px;
+    -o-border-radius: 0 0 20px 20px;
+}
+.link-dropdown{
+    font-size: 1rem !important;
+    cursor: pointer;
+}
 @media (min-width:820px) {
     nav{
         justify-content: space-around;
@@ -135,7 +156,7 @@ nav{
     }
     .link-nav-container{
         width: max-content;
-        display: block;
+        display: block !important;
         position: relative;
         top: 0;
         bottom: 0;
@@ -185,5 +206,8 @@ nav{
         -ms-transform: scale(1.1);
         -o-transform: scale(1.1);
         cursor: pointer;
-}
+    }
+    .user-login{
+        display: none;
+    }
 }
