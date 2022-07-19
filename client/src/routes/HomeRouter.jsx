@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import Home from '../pages/home';
 import Nav from '../components/navbar/nav';
 import FooterWrapper from '../components/footer/footerWrapper';
-
+import AboutUs from '../pages/aboutUs';
 
 const HomeRouter = () => {
     const estado = useSelector((state) => state);
@@ -14,6 +14,7 @@ const HomeRouter = () => {
             <Nav />
             <Routes>
                 <Route path='/' element={<Home />} />
+                <Route path='/about' element={<AboutUs />} />
             </Routes>
             <FooterWrapper />
         </>
