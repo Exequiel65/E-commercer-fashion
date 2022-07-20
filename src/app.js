@@ -25,8 +25,10 @@ app.use(cors())
 //Require Routes
 const authRouter = require('./routes/auth')
 const productRouter = require('./routes/product')
+const companyRouter = require('./routes/company')
 app.use('/auth', authRouter)
 app.use('/product', productRouter)
+app.use('/company', companyRouter)
 
 app.use(isLogin.login)
 
