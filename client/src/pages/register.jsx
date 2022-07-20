@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import { titlePage } from '../helpers/changeTitlePage';
 const Register = () => {
     useEffect(() => {
-        titlePage('Registrarse')
+        titlePage('Register')
     }, []);
     return (
         <main className='auth-main'>

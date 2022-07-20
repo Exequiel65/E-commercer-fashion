@@ -7,7 +7,7 @@ import { titlePage } from '../helpers/changeTitlePage';
 
 const AboutUs = () => {
     useEffect(() => {
-        titlePage('Nostros')
+        titlePage('About Us')
     }, []);
     return (
         <main className='main-about flex-colummn'>

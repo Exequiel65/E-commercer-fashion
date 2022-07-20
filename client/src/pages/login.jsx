@@ -7,7 +7,7 @@ import '../styles/login.css'
 const Login = () => {
     
     useEffect(() => {
-        titlePage('Iniciar Sesión')
+        titlePage('Login')
     }, []);
     return (
         <main className='auth-main'>

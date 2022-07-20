@@ -15,7 +15,7 @@ const Home = () => {
     }
     useEffect(() => {
         apiGet()
-        titlePage('Inicio')
+        titlePage('Home')
     }, []);
     return (
         <main className='main-home'>
