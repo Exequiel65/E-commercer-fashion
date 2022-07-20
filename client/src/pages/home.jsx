@@ -5,7 +5,7 @@ import DownHome from '../components/home/bottomHome/downHome';
 import '../styles/home.css'
 import { FetchGet } from '../helpers/AxiosMethod'
 import FirstVist from '../components/firstVist';
-
+import { titlePage } from '../helpers/changeTitlePage';
 const Home = () => {
     const [Products, setProducts] = useState({});
 
@@ -15,11 +15,12 @@ const Home = () => {
     }
     useEffect(() => {
         apiGet()
+        titlePage('Inicio')
     }, []);
     return (
         <main className='main-home'>
             <FirstVist title='Welcome to E-commercer' descr='Lorem, ipsum dolor sit amet'/>
-            <Carrousel products={Products.discounts} />
+            { Products && <Carrousel products={Products.discounts} />}
 
             <NewsWrapper featured={Products.featuredProducts} bestSellers={Products.bestSellers} newArrival={Products.newArrival} />
             <DownHome />

@@ -2,8 +2,12 @@ import React from 'react';
 import SectionApart from '../components/auth/sectionApart';
 import SectionForm from '../components/auth/sectionForm';
 import '../styles/login.css'
-
+import { useEffect } from 'react';
+import { titlePage } from '../helpers/changeTitlePage';
 const Register = () => {
+    useEffect(() => {
+        titlePage('Registrarse')
+    }, []);
     return (
         <main className='auth-main'>
             <SectionApart />

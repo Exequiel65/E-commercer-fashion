@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Founders = ({Founder1, Founder2}) => {
-    console.log(Founder1)
     return (
         <section className='flex-colummn section-about'>
                 <h2>Our Founders</h2>

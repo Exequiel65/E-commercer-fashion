@@ -1,8 +1,14 @@
 import React from 'react';
+import { useEffect } from 'react';
 import SectionApart from '../components/auth/sectionApart';
 import SectionForm from '../components/auth/sectionForm';
+import { titlePage } from '../helpers/changeTitlePage';
 import '../styles/login.css'
 const Login = () => {
+    
+    useEffect(() => {
+        titlePage('Iniciar Sesión')
+    }, []);
     return (
         <main className='auth-main'>
             <SectionApart />
