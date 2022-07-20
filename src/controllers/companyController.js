@@ -6,7 +6,7 @@ class CompanyController {
     static async getCompany(req, res){
         let company;
         try {
-            company = await Company.find({})
+            company = await Company.findOne({name : 'E-comerce'})
         } catch (error) {
             return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
                 msg: error
@@ -18,9 +18,10 @@ class CompanyController {
     }
 
     static async created(req, res){
-        let { name, mission, culture, vision, founders } = req.body
+        let { name, titleMision, mission, culture, vision, founders } = req.body
         let company = new Company({
-            name, 
+            name,
+            titleMision, 
             mission,
             culture,
             vision,

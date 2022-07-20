@@ -1,7 +1,6 @@
 import React from "react";
 
-const CompanyMission = () => {
-
+const CompanyMission = ({titleMision, mission, culture}) => {
   return (
     <section className="flex-colummn section-about ">
       <article data-aos="fade-left" className="flex-colummn article-about">
@@ -10,11 +9,9 @@ const CompanyMission = () => {
         </div>
         <div className="description-container">
           <span>Company Mission</span>
-          <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</h4>
+          <h4>{titleMision}</h4>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, id,
-            animi excepturi ipsum enim aliquid accusamus numquam deserunt ab
-            quae veniam debitis! Vero dicta cum enim quidem nobis nemo quia?
+            {mission}
           </p>
         </div>
       </article>
@@ -23,13 +20,12 @@ const CompanyMission = () => {
           <img src="/img/imageAbout2.png" alt="" />
         </div>
         <div className="description-container" id="description-2">
-          <span>Company Culture </span>
+          <span>Company Culture</span>
           <ul>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
-            <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</li>
+            { culture.map( (cul , i) =>(
+              <li key={i}>{cul}</li>
+            ) )}
+           
           </ul>
         </div>
       </article>
