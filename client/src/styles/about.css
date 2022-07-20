@@ -5,6 +5,7 @@
     width: 90%;
     margin-top: 50px;
     margin-bottom: 100px;
+    overflow: hidden;
 }
 
 .article-about:nth-child(2){
