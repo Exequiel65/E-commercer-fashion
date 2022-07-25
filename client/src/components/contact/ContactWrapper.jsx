@@ -1,7 +1,6 @@
 import React from 'react';
 
 const ContactWrapper = ({contact}) => {
-    console.log(contact)
     return (
         <section className='flex-colummn section-contact-contain'>
             <div className='iframe-map-goole-container'>
@@ -14,7 +13,7 @@ const ContactWrapper = ({contact}) => {
                         Horarios:
                         <ul className='hours-job'>
                             {contact.hours.map((d, i)=>(
-                                <li>{`${d.days} : ${d.hour}`}</li>
+                                <li key={i + d.days}>{`${d.days} : ${d.hour}`}</li>
                             ))}
                             
                         </ul>
