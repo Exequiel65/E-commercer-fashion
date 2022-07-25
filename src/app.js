@@ -26,9 +26,11 @@ app.use(cors())
 const authRouter = require('./routes/auth')
 const productRouter = require('./routes/product')
 const companyRouter = require('./routes/company')
+const contactRouter = require('./routes/contact')
 app.use('/auth', authRouter)
 app.use('/product', productRouter)
 app.use('/company', companyRouter)
+app.use('/contact', contactRouter)
 
 app.use(isLogin.login)
 
