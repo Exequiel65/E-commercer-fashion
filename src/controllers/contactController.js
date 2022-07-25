@@ -5,11 +5,12 @@ let httpStatus = require('../helpers/httpStatus')
 
 class ContactController{
     static async createContact(req, res){
-        let { company, address, email, phone, hours, addressLinkMaps } = req.body
+        let { company, address, email, phone, hours, addressLinkMaps, iframeMaps } = req.body
 
         let contact = new Contact({
             company,
             address,
+            iframeMaps,
             email,
             phone,
             hours,

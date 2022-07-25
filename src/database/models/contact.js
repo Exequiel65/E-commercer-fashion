@@ -8,6 +8,7 @@ const contactSchema = new Schema({
     },
     address : [{ type : String}],
     addressLinkMaps : [{ type : String}],
+    iframeMaps : [{type : String}],
     email : [{ type : String}],
     phone : [{ type : Number}],
     hours : [
