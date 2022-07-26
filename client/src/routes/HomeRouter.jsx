@@ -6,6 +6,7 @@ import Nav from '../components/navbar/nav';
 import FooterWrapper from '../components/footer/footerWrapper';
 import AboutUs from '../pages/aboutUs';
 import Contact from '../pages/Contact';
+import Products from '../pages/Products';
 
 const HomeRouter = () => {
     const estado = useSelector((state) => state);
@@ -17,6 +18,8 @@ const HomeRouter = () => {
                 <Route path='/' element={<Home />} />
                 <Route path='/about' element={<AboutUs />} />
                 <Route path='/contact' element={<Contact />} />
+                <Route path='/products' element={<Products />} />
+                
             </Routes>
             <FooterWrapper />
         </>
