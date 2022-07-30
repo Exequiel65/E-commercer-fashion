@@ -48,6 +48,7 @@
     font-weight: 500;
     font-size: 18px;
     color: #000000;
+    max-height: 27px;
 }
 
 .data-products p:last-child{

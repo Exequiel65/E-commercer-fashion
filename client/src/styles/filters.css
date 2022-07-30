@@ -1,0 +1,133 @@
+.filter-products-all{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(223, 226, 226);
+    border-radius: 10px;
+    max-width: 350px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.title{
+    padding-bottom: 10px;
+}
+
+.filter-order{
+    border-bottom: 1px solid gray;
+    background-color: rgb(247, 247, 247);
+    padding: 4px;
+    width: 100%;
+    position: relative;
+    transition: all 1s ease;
+    height: 30px;
+    overflow: hidden;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+}
+
+.filter-order:nth-child(2){
+    border-radius: 10px 10px 0 0;
+    -webkit-border-radius: 10px 10px 0 0;
+    -moz-border-radius: 10px 10px 0 0;
+    -ms-border-radius: 10px 10px 0 0;
+    -o-border-radius: 10px 10px 0 0;
+}
+
+.filter-order:last-child{
+    border-radius: 0 0 10px 10px;
+    -webkit-border-radius: 0 0 10px 10px;
+    -moz-border-radius: 0 0 10px 10px;
+    -ms-border-radius: 0 0 10px 10px;
+    -o-border-radius: 0 0 10px 10px;
+}
+
+
+.ds-down{
+    height: 160px;
+}
+.form-order{
+    padding-left: 10px;
+}
+
+.radio-order label{
+    padding: 5px ;
+    padding-left: 14px;
+}
+.order-title{
+    border-bottom: 1px solid gray;
+    width: 100%;
+    user-select: none;
+}
+
+.order-title p{
+    padding-right: 15px;
+    display: inline-block;
+    cursor: pointer;
+}
+.botton-close{
+    color: rgb(88, 25, 25);
+    font-weight: 700;
+    cursor: pointer;
+}
+.select-filter{
+    color: rgb(4, 50, 136);
+}
+@media (min-width:752px) {
+    .filter-products-all{
+        width: 100%;
+        max-width: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        z-index: 80;
+    }
+    .title{
+        width: 100%;
+    }
+    .filter-order{
+        width: 50%;
+    }
+    .filter-order:nth-child(2){
+       border-radius: 10px 0 0 10px;
+       -webkit-border-radius: 10px 0 0 10px;
+       -moz-border-radius: 10px 0 0 10px;
+       -ms-border-radius: 10px 0 0 10px;
+       -o-border-radius: 10px 0 0 10px;
+    }
+    .filter-order:last-child{
+        border-radius: 0 10px 10px 0;
+        -webkit-border-radius: 0 10px 10px 0;
+        -moz-border-radius: 0 10px 10px 0;
+        -ms-border-radius: 0 10px 10px 0;
+        -o-border-radius: 0 10px 10px 0;
+        border-left: 1px solid gray;
+    }
+
+}
+
+@media (min-width:820px) {
+    .filter-order{
+        /* overflow:visible; */
+        position: relative;
+        
+    }
+    .form-order{
+        position: absolute;
+        top: -145px;
+        left: 0;
+        z-index: 10;
+        background-color: white;
+        width: 100%;
+        border: 1px solid gray;
+        border-radius: 20px 0 20px 0;
+        -webkit-border-radius: 20px 0 20px 0;
+        -moz-border-radius: 20px 0 20px 0;
+        -ms-border-radius: 20px 0 20px 0;
+        -o-border-radius: 20px 0 20px 0;
+        padding: 7px;
+        padding-left: 14px;
+    }
+}
