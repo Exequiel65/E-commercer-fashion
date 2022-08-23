@@ -6,7 +6,7 @@ const validateResponse = async (setErrors, FormValue, Errors,url, setLoad )=>{
     let msgs = {
         ...Errors
     }
-    let response = await fetchPost(`${HOST}${url}`, FormValue)
+    let response = await fetchPost(`${HOST + url}`, FormValue)
     if (response.request.status === 400) {
         setLoad(false)
         if (response.response.data.errors) {

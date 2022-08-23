@@ -26,8 +26,12 @@
 .contact-container ul li i{
     padding: 0 10px ;
 }
+.hours-job{
+    /* overflow: hidden; */
+}
 .hours-job li{
-    margin-left: 20px;
+    padding-inline-start: 40px !important;
+    
 }
 
 @media (min-width:820px) {
