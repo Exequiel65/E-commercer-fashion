@@ -6,7 +6,7 @@ Actualmente se encuentra en desarrollo.
 ## Deployment
 ##### _Cliente_
 - Deploy en Vercel : [Link](https://e-commercer-fashion.vercel.app/)
-- Deploy en heroku : [Link](https://api-e-commercer-fashion.herokuapp.com/api-docs)
+- Deploy en Render : [Link](https://api-eccomerce.onrender.com)
 
 ## Descarga del proyecto:
 El proyecto esta estructurado de la siguiente forma:
