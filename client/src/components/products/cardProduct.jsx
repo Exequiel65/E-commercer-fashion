@@ -4,7 +4,7 @@ import { toThousand } from "../../helpers/toThousand";
 
 const CardProduct = ({product}) => {
   return (
-    <Link to="/" className="card-product">
+    <Link to={`/products/${product._id}`} className="card-product">
       <div className="image-container">
         <img src={product.images[0]} alt="" />
       </div>

@@ -7,7 +7,7 @@ const isLogin = require('./middlewares/isLogin')
 const cors = require('cors')
 // Conection MongoDB
 const mongoose = require('mongoose')
-const connectionString = process.env.URI_DB
+const connectionString = process.env.URI_DB_DEV
 mongoose.connect(connectionString,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
