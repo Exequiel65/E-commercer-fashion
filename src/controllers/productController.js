@@ -78,6 +78,29 @@ class ProductController{
             discounts : discounts.slice(0,10)
         })
     }
+
+
+    static async getOneProduct(req, res){
+        let id = req.params.id
+        let product
+
+        try {
+            product = await Product.findById(id)
+        } catch (error) {
+            return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
+                msg: error
+            })
+        }
+
+        if (!product) {
+            return res.status(httpStatus.NOT_FOUND).json({
+                msg : "Error al encontrar el Producto"
+            })
+        }
+        res.status(httpStatus.OK).json({
+            product
+        })
+    }
 }
 
 module.exports = ProductController

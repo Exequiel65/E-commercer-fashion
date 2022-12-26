@@ -134,6 +134,7 @@
 }
 @media (min-width:1200px) {
     .image-contain-home{
+        margin-top: 20px;
         display: block;
     }
     .downHome{
