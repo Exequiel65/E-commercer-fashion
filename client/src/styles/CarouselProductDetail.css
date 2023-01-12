@@ -1,0 +1,35 @@
+.img-contain-slide img{
+    width: 100%;
+}
+
+.img-contain-slide{
+    width: 265px;
+    min-width: 265px;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slider-container{
+    justify-content: space-evenly !important;
+}
+.button-slide{
+    cursor: pointer;
+}
+
+.list-images img{
+    width: 60px;
+    object-fit: cover;
+}
+
+.list-images{
+    margin-top: 30px;
+    padding-bottom: 30px;
+    gap: 4%;
+}
+
+@media (min-width:1280px) {
+    .img-contain-slide{
+        width: 350px;
+    }
+}
+

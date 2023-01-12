@@ -6,6 +6,11 @@
     margin-top: 50px;
     padding-bottom: 100px;
 }
+
+.readAndImage{
+    overflow: visible !important;
+    
+}
 .image-contain-home{
     display: none;
 }

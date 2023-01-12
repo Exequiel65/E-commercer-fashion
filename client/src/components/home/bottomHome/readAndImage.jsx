@@ -2,7 +2,7 @@ import React from "react";
 
 const ReadAndImage = () => {
   return (
-    <div className="image-container flex-colummn">
+    <div className="image-container flex-colummn readAndImage" >
       <div className="image-contain-home">
         <img src="/img/1920-11 2.png" alt="" />
       </div>
