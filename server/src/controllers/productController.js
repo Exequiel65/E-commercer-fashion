@@ -4,9 +4,10 @@ let sorted = require('../helpers/sort')
 
 class ProductController{
     static async all(req, res){
+        let query = req.query.categorie
         let products
         try {
-            products = await Product.find({})
+            products = query ? await Product.find({categorie: query}) : await Product.find({})
         } catch (error) {
             return res.status(httpStatus.INTERNAL_SERVER_ERROR).json({
                 msg: error

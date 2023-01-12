@@ -137,7 +137,7 @@ nav{
         justify-content: space-around;
     }
 }
-@media (min-width : 1200px) {
+@media (min-width : 1024px) {
     .logo-contain{
         flex-grow: 0.5;
     }

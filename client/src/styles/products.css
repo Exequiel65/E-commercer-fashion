@@ -33,10 +33,14 @@
     padding: 20px 0;
 }
 
+.data-products p{
+    overflow: hidden;
+}
+
 .image-container{
     
     max-height: 330px;
-    /* overflow: hidden; */
+    overflow: hidden;
     border-radius: 20px 20px 0 0;
     -webkit-border-radius: 20px 20px 0 0;
     -moz-border-radius: 20px 20px 0 0;

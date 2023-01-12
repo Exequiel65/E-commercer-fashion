@@ -8,7 +8,7 @@ import FirstVist from '../components/firstVist';
 import { titlePage } from '../helpers/changeTitlePage';
 const Home = () => {
     const [Products, setProducts] = useState({});
-
+    
     const apiGet = async ()=>{
         let products = await FetchGet('/product/featured')
         setProducts(products.data)
@@ -16,6 +16,7 @@ const Home = () => {
     useEffect(() => {
         apiGet()
         titlePage('Home')
+       
     }, []);
     return (
         <main className='main-home'>
